@@ -1,284 +1,292 @@
 <!DOCTYPE html>
 <html class="light" lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Anchor · Private Reset</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mental Wellness Landing Page</title>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-    rel="stylesheet"
-  />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
 
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            canvas: "#FDFBF7",
-            "canvas-dark": "#1A1A1A",
-            primary: "#4A5D5E",
-            "primary-hover": "#364546",
-            surface: "#F2F0E9",
-            "surface-dark": "#262626",
-            highlight: "#E3EDE6",
-            "highlight-dark": "#1F2E2E",
-            "text-main": "#2C2825",
-            "text-body": "#595552",
-            "text-muted": "#8C8885",
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              canvas: "#FDFBF7",
+              "canvas-dark": "#1A1A1A",
+              primary: "#4A5D5E",
+              "primary-hover": "#364546",
+              surface: "#F2F0E9",
+              "surface-dark": "#262626",
+              highlight: "#E3EDE6",
+              "highlight-dark": "#1F2E2E",
+              "text-main": "#2C2825",
+              "text-body": "#595552",
+              "text-muted": "#8C8885",
+            },
+            fontFamily: {
+              serif: ["Lora", "serif"],
+              sans: ["Manrope", "sans-serif"],
+            },
+            borderRadius: { xl: "1rem", "2xl": "1.5rem" },
           },
-          fontFamily: {
-            serif: ["Lora", "serif"],
-            sans: ["Manrope", "sans-serif"],
-          },
-          borderRadius: { xl: "1rem", "2xl": "1.5rem" },
         },
-      },
-    };
-  </script>
+      };
+    </script>
 
-  <style>
-    body { min-height: max(884px, 100dvh); }
-  </style>
-</head>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
 
-<body class="bg-canvas dark:bg-canvas-dark font-sans text-text-main dark:text-gray-100 antialiased selection:bg-primary/20 selection:text-primary">
-  <!-- MAIN CONTAINER -->
-  <div class="relative flex h-auto min-h-screen w-full max-w-md md:max-w-[880px] lg:max-w-[980px] mx-auto flex-col overflow-x-hidden border-x border-stone-200 dark:border-stone-800/50 shadow-[0_0_40px_-10px_rgba(0,0,0,0.05)] md:border-x-0 md:bg-canvas dark:md:bg-canvas-dark md:rounded-2xl md:my-10 md:border md:border-stone-200 dark:md:border-stone-800/50 md:shadow-[0_0_40px_-10px_rgba(0,0,0,0.05)]">
-
-    <!-- Header / Wordmark + Desktop CTA -->
-    <header class="px-6 md:px-10 lg:px-12 pt-6 md:pt-10">
-      <div class="flex items-start justify-between gap-4">
-        <div>
-          <div class="text-sm font-semibold tracking-wide text-text-body text-left">
-            Anchor
-          </div>
-          <div class="text-[11px] font-semibold tracking-widest text-text-muted mt-3">
-            PRIVATE RESET · 3 MINUTES · NO JOURNALING
-          </div>
+  <body
+    class="bg-canvas dark:bg-canvas-dark font-sans text-text-main dark:text-gray-100 antialiased selection:bg-primary/20 selection:text-primary"
+  >
+    <!-- WIDER MAIN CONTAINER -->
+    <div
+      class="relative flex h-auto min-h-screen w-full max-w-md md:max-w-[880px] lg:max-w-[980px] mx-auto flex-col overflow-x-hidden border-x border-stone-200 dark:border-stone-800/50 shadow-[0_0_40px_-10px_rgba(0,0,0,0.05)] md:border-x-0 md:bg-canvas dark:md:bg-canvas-dark md:rounded-2xl md:my-10 md:border md:border-stone-200 dark:md:border-stone-800/50 md:shadow-[0_0_40px_-10px_rgba(0,0,0,0.05)]"
+    >
+      <!-- Header / Wordmark -->
+      <div class="px-6 pt-6 md:pt-10">
+        <div class="text-sm font-medium tracking-wide text-text-body text-left">
+          Anchor
         </div>
+        <div class="text-xs font-medium tracking-widest text-text-muted mt-3 mb-3">
+          PRIVATE RESET · 3 MINUTES · NO JOURNALING
+        </div>
+      </div>
 
-        <!-- Desktop-only quick CTA -->
-        <div class="hidden md:flex">
+      <!-- Hero Section -->
+      <section class="px-6 pt-6 pb-6 flex flex-col gap-5 md:pt-6 md:pb-6 md:gap-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-[1.1] tracking-tight text-text-main">
+          Stay grounded when family time pulls you away from yourself.
+        </h1>
+
+        <h2 class="text-lg font-light text-text-body dark:text-gray-400 leading-relaxed max-w-[40rem]">
+          A quiet, private 3 minute reset for people who are usually the strong one.
+        </h2>
+
+        <div>
           <a
             href="#cta"
-            class="inline-flex items-center justify-center rounded-xl bg-[#2C2825] hover:bg-[#1a1614] text-white font-semibold text-sm px-5 h-11 transition-colors"
+            class="inline-flex items-center justify-center rounded-xl bg-[#2C2825] hover:bg-[#1a1614] text-white font-medium text-sm px-4 h-10 transition-colors"
           >
             Send it to me
           </a>
         </div>
-      </div>
-    </header>
+      </section>
 
-    <!-- Hero Section -->
-    <section class="px-6 md:px-10 lg:px-12 pt-6 pb-7 flex flex-col gap-5 md:pt-6 md:pb-8 md:gap-6">
-      <h1 class="text-4xl md:text-5xl font-extrabold leading-[1.08] tracking-tight text-text-main">
-        Stay grounded when family time pulls you away from yourself.
-      </h1>
-
-      <h2 class="text-lg md:text-xl font-light text-text-body dark:text-gray-400 leading-relaxed max-w-[40rem]">
-        A quiet, private 3-minute reset for people who are usually the strong one.
-      </h2>
-
-      <!-- Mobile-only CTA (desktop already has one in header) -->
-      <div class="pt-1 md:hidden">
-        <a
-          href="#cta"
-          class="inline-flex items-center justify-center rounded-xl bg-[#2C2825] hover:bg-[#1a1614] text-white font-semibold text-sm px-5 h-11 transition-colors"
-        >
-          Send it to me
-        </a>
-      </div>
-    </section>
-
-    <!-- Body Copy -->
-    <section class="px-6 md:px-10 lg:px-12 py-4 flex flex-col gap-5 md:pt-3 md:pb-6">
-      <div class="flex flex-col gap-1">
-        <p class="text-sm md:text-base text-text-body leading-relaxed">You don’t need to fix anything.</p>
-        <p class="text-sm md:text-base text-text-body leading-relaxed">You don’t need to explain yourself.</p>
-        <p class="text-sm md:text-base text-text-body leading-relaxed">You just need a moment to come back to yourself.</p>
-      </div>
-
-      <p class="font-serif text-base md:text-lg leading-relaxed text-text-body dark:text-gray-300/90 max-w-[56rem]">
-        Family time can quietly pull you out of yourself. This is a short reset for when you notice that happening.
-      </p>
-
-      <div class="pt-2">
-        <h3 class="text-base font-bold leading-relaxed text-text-main dark:text-gray-200">
+      <!-- Body Copy (tightened) -->
+      <section class="px-6 py-4 flex flex-col gap-5 md:pt-4 md:pb-6 md:gap-6">
+        <div class="flex flex-col gap-1">
+          <p class="text-sm md:text-base text-text-body leading-relaxed">You don't need to fix anything.</p>
+          <p class="text-sm md:text-base text-text-body leading-relaxed">You don't need to explain yourself.</p>
+          <p class="text-sm md:text-base text-text-body leading-relaxed">You just need a moment to come back.</p>
+        </div>
+        <h3 class="text-base font-bold leading-relaxed text-text-main dark:text-gray-200 mt-2">
           This is for you if:
         </h3>
 
-        <ul class="mt-2 list-disc list-inside space-y-2 text-base leading-relaxed text-text-body dark:text-gray-300">
-          <li>You are emotionally aware but feel drained after family interactions</li>
-          <li>You’re often the one holding it together</li>
+        <ul class="list-disc list-inside space-y-2 text-base font-sans leading-relaxed text-text-body dark:text-gray-300">
+          <li>You feel drained after family interactions</li>
+          <li>You are often the one holding it together</li>
           <li>You want support without journaling, talking, or processing out loud</li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- Cards -->
-    <section class="px-6 md:px-10 lg:px-12 py-7 md:py-10">
-      <p class="text-sm md:text-base italic text-text-muted opacity-95 mb-6">
-        Just a moment of internal support.
-      </p>
+      <!-- TWO-COLUMN ROW: What this is + What this is not -->
+      <section class="px-6 py-8 md:py-10">
+        <p class="text-sm italic text-text-muted opacity-90 mb-6">Just a moment of internal support.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
-        <!-- What this is -->
-        <div class="rounded-2xl bg-[#EEF1F6] dark:bg-white/5 p-8 md:p-9 h-full flex flex-col">
-          <h3 class="font-sans text-xs font-bold uppercase tracking-widest text-primary dark:text-teal-200/70 opacity-80 mb-6">
-            What this is
-          </h3>
+        <!-- Use md:items-stretch + h-full cards to force equal height -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 md:items-stretch">
+          <!-- What this is -->
+          <div class="rounded-2xl bg-[#EEF1F6] dark:bg-white/5 p-8 h-full flex flex-col">
+            <h3
+              class="font-sans text-xs font-bold uppercase tracking-widest text-primary dark:text-teal-200/70 opacity-80 mb-6"
+            >
+              What this is
+            </h3>
 
-          <div class="flex flex-col gap-4">
-            <div class="flex gap-4 items-start">
-              <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-4 items-start">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-200">A private reset you can do anywhere</p>
               </div>
-              <p class="text-base text-text-main dark:text-gray-200">A private mental reset you can do anywhere</p>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-200">
+                  Takes about <strong>3 minutes</strong>
+                </p>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-200">Nothing to write</p>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-200">Nothing to fix</p>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-200">Two quiet questions to help you re orient</p>
+              </div>
             </div>
 
-            <div class="flex gap-4 items-start">
-              <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+            <!-- Spacer ensures internal layout stays clean even if content changes -->
+            <div class="mt-auto"></div>
+          </div>
+
+          <!-- What this is not -->
+          <div class="rounded-2xl bg-surface dark:bg-surface-dark p-8 h-full flex flex-col">
+            <h3 class="font-sans text-xs font-bold uppercase tracking-widest text-text-muted opacity-80 mb-6">
+              What this is not
+            </h3>
+
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-4 items-start opacity-75">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-300">Not therapy</p>
               </div>
-              <p class="text-base text-text-main dark:text-gray-200">Takes about <strong>3 minutes</strong>.</p>
+
+              <div class="flex gap-4 items-start opacity-75">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-300">Not journaling</p>
+              </div>
+
+              <div class="flex gap-4 items-start opacity-75">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-300">Not habit building</p>
+              </div>
+
+              <div class="flex gap-4 items-start opacity-75">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-300">Not a commitment</p>
+              </div>
+
+              <div class="flex gap-4 items-start opacity-75">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-300">Not something you need to keep up with</p>
+              </div>
             </div>
 
-            <div class="flex gap-4 items-start">
-              <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-200">Nothing to write</p>
-            </div>
-
-            <div class="flex gap-4 items-start">
-              <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-200">Nothing to fix</p>
-            </div>
-
-            <div class="flex gap-4 items-start">
-              <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-200">Two quiet questions to help you re-orient</p>
-            </div>
+            <div class="mt-auto"></div>
           </div>
         </div>
+      </section>
 
-        <!-- What this is not -->
-        <div class="rounded-2xl bg-surface dark:bg-surface-dark p-8 md:p-9 h-full flex flex-col">
-          <h3 class="font-sans text-xs font-bold uppercase tracking-widest text-text-muted opacity-80 mb-6">
-            What this is not
-          </h3>
+      <div class="grow"></div>
 
-          <div class="flex flex-col gap-4">
-            <div class="flex gap-4 items-start opacity-80">
-              <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-300">Not therapy</p>
-            </div>
-
-            <div class="flex gap-4 items-start opacity-80">
-              <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-300">Not journaling</p>
-            </div>
-
-            <div class="flex gap-4 items-start opacity-80">
-              <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-300">Not habit building</p>
-            </div>
-
-            <div class="flex gap-4 items-start opacity-80">
-              <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-300">Not a commitment</p>
-            </div>
-
-            <div class="flex gap-4 items-start opacity-80">
-              <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-300">Not something you need to keep up with</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="grow"></div>
-
-    <!-- Email Capture -->
-    <section id="cta" class="px-6 md:px-10 lg:px-12 py-10 md:py-12 bg-canvas mt-2 border-t border-stone-100 dark:border-white/5">
-      <div class="max-w-[560px] mx-auto text-center space-y-4">
-        <h4 class="text-xl md:text-2xl font-semibold text-text-main dark:text-white">
-          Try a quiet 3-minute reset
-        </h4>
-
-        <p class="text-sm text-text-muted dark:text-gray-400">
-          For when you have been around family and feel disconnected from yourself.
-        </p>
-
-        <div class="mt-6 mb-3 text-left">
-          <p class="text-sm font-semibold text-text-main">What you’ll receive</p>
-          <p class="text-sm text-text-body dark:text-gray-400 leading-relaxed">
-            A short email with two grounding questions you can use immediately. No reply required.
+      <!-- Email Capture -->
+      <section
+        id="cta"
+        class="px-6 py-10 md:py-12 bg-canvas mt-8 md:mt-10 border-t border-stone-100 dark:border-white/5"
+      >
+        <div class="max-w-[520px] mx-auto text-center space-y-4">
+          <h4 class="text-xl font-semibold text-text-main dark:text-white">Try the quiet 3 minute reset</h4>
+          <p class="text-sm text-text-muted dark:text-gray-400">
+            For when you have been around family and feel disconnected from yourself.
           </p>
+
+          <div class="mt-6 mb-3 text-left">
+            <p class="text-sm font-medium text-text-main">What you'll receive</p>
+            <p class="text-sm text-text-body dark:text-gray-400 leading-relaxed">
+              A short email with two grounding questions you can use immediately. No reply required.
+            </p>
+          </div>
+
+          <form class="flex flex-col gap-4 items-stretch" method="POST" action="YOUR_FORM_ENDPOINT_HERE">
+            <label class="text-sm text-text-main dark:text-gray-200 text-left" for="cta-email">
+              Where should I send it?
+            </label>
+
+            <input
+              id="cta-email"
+              name="email"
+              required
+              class="w-full h-16 rounded-xl border border-gray-200 dark:border-gray-700 bg-surface dark:bg-surface-dark px-4 text-lg placeholder:text-gray-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all shadow-inner"
+              placeholder="you@example.com"
+              type="email"
+            />
+
+            <button
+              class="h-16 w-full rounded-xl bg-[#2C2825] hover:bg-[#1a1614] dark:bg-white text-white dark:text-black font-medium text-lg transition-colors flex items-center justify-center"
+              type="submit"
+            >
+              <span>Send it to me</span>
+            </button>
+          </form>
+
+          <p class="text-xs text-text-muted mt-2">We respect your inbox. No spam. Unsubscribe anytime.</p>
+          <p class="text-[11px] text-text-muted mt-1">This is not therapy or medical care.</p>
         </div>
+      </section>
 
-        <form class="flex flex-col gap-4 items-stretch" method="POST" action="YOUR_FORM_ENDPOINT_HERE">
-          <label class="text-sm font-medium text-text-main dark:text-gray-200 text-left" for="cta-email">
-            Where should I send it?
-          </label>
-
-          <input
-            id="cta-email"
-            name="email"
-            required
-            class="w-full h-16 rounded-xl border border-gray-200 dark:border-gray-700 bg-surface dark:bg-surface-dark px-5 text-lg placeholder:text-gray-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all shadow-inner"
-            placeholder="you@example.com"
-            type="email"
-            autocomplete="email"
-            inputmode="email"
-          />
-
-          <button
-            class="h-16 w-full rounded-xl bg-[#2C2825] hover:bg-[#1a1614] dark:bg-white text-white dark:text-black font-semibold text-lg transition-colors flex items-center justify-center"
-            type="submit"
-          >
-            <span>Send it to me</span>
-          </button>
-        </form>
-
-        <p class="text-xs text-text-muted mt-2">We respect your inbox. No spam. Unsubscribe anytime.</p>
-        <p class="text-[11px] text-text-muted mt-1">This is not therapy or medical care.</p>
-      </div>
-    </section>
-
-    <p class="px-6 md:px-10 lg:px-12 mt-2 pb-4 text-xs text-text-muted text-center">
-      This experience is part of Anchor · quiet mental support for emotionally demanding moments.
-    </p>
-
-    <!-- Footer -->
-    <footer class="p-6 text-center border-t border-gray-100 dark:border-gray-800">
-      <p class="text-xs text-text-muted font-medium">
-        © 2026 Anchor · quiet mental support for emotionally demanding moments.
+      <p class="px-6 mt-2 pb-4 text-xs text-text-muted text-center">
+        This experience is part of Anchor. Quiet mental support for emotionally demanding moments.
       </p>
-    </footer>
-  </div>
-</body>
+
+      <!-- Footer -->
+      <footer class="p-6 text-center border-t border-gray-100 dark:border-gray-800">
+        <p class="text-xs text-text-muted font-medium">
+          © 2026 Anchor. Quiet mental support for emotionally demanding moments.
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
