@@ -229,27 +229,54 @@
             A short email with two grounding questions you can use immediately. No reply required.
           </p>
         </div>
+        <iframe name="ml_hidden_iframe" id="ml_hidden_iframe" style="display:none; width:0; height:0; border:0;"
+          title="hidden"></iframe>
 
-        <form class="flex flex-col gap-4 items-stretch" method="POST"
-          action="https://assets.mailerlite.com/jsonp/2031056/forms/176313741641516643/subscribe" target="_blank">
+        <form id="ml-signup-form" class="flex flex-col gap-4 items-stretch" method="POST"
+          action="https://assets.mailerlite.com/jsonp/2031056/forms/176313741641516643/subscribe" target="ml_hidden_iframe">
           <label class="text-sm text-text-main dark:text-gray-200 text-left" for="cta-email">
             Where should I send it?
           </label>
-
+        
           <input id="cta-email" name="fields[email]" required
             class="w-full h-16 rounded-xl border border-gray-200 dark:border-gray-700 bg-surface dark:bg-surface-dark px-4 text-lg placeholder:text-gray-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all shadow-inner"
             placeholder="you@example.com" type="email" autocomplete="email" />
-
+        
           <input type="hidden" name="ml-submit" value="1" />
           <input type="hidden" name="anticsrf" value="true" />
-
+        
           <button
             class="h-16 w-full rounded-xl bg-[#2C2825] hover:bg-[#1a1614] dark:bg-white text-white dark:text-black font-medium text-lg transition-colors flex items-center justify-center"
             type="submit">
             <span>Send it to me</span>
           </button>
+        
+          <!-- optional: your own success message container -->
+          <p id="ml-success" style="display:none; margin-top:12px;">
+            Check your inbox for the email (and your spam/promotions folder just in case).
+          </p>
         </form>
+        <!-- tiny script to show success after form submission -->
+        <script>
+          (function () {
+            const form = document.getElementById("ml-signup-form");
+            const iframe = document.getElementById("ml_hidden_iframe");
+            const success = document.getElementById("ml-success");
 
+            if (!form || !iframe) return;
+
+            form.addEventListener("submit", function () {
+              // show success after the request returns (iframe load)
+              iframe.onload = function () {
+                if (success) success.style.display = "block";
+                // optional: disable form after submit
+                // form.querySelector('button[type="submit"]').disabled = true;
+                // optional: clear the input
+                // form.reset();
+              };
+            });
+          })();
+        </script>
 
         <p class="text-xs text-text-muted mt-2">We respect your inbox. No spam. Unsubscribe anytime.</p>
         <p class="text-[11px] text-text-muted mt-1">This is not therapy or medical care.</p>
