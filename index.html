@@ -1,299 +1,349 @@
 <!DOCTYPE html>
 <html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mental Wellness Landing Page</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Mental Wellness Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-    rel="stylesheet" />
-
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            canvas: "#FDFBF7",
-            "canvas-dark": "#1A1A1A",
-            primary: "#4A5D5E",
-            "primary-hover": "#364546",
-            surface: "#F2F0E9",
-            "surface-dark": "#262626",
-            highlight: "#E3EDE6",
-            "highlight-dark": "#1F2E2E",
-            "text-main": "#2C2825",
-            "text-body": "#595552",
-            "text-muted": "#8C8885",
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              canvas: "#FDFBF7",
+              "canvas-dark": "#1A1A1A",
+              primary: "#4A5D5E",
+              "primary-hover": "#364546",
+              surface: "#F2F0E9",
+              "surface-dark": "#262626",
+              highlight: "#E3EDE6",
+              "highlight-dark": "#1F2E2E",
+              "text-main": "#2C2825",
+              "text-body": "#595552",
+              "text-muted": "#8C8885",
+            },
+            fontFamily: {
+              serif: ["Lora", "serif"],
+              sans: ["Manrope", "sans-serif"],
+            },
+            borderRadius: { xl: "1rem", "2xl": "1.5rem" },
           },
-          fontFamily: {
-            serif: ["Lora", "serif"],
-            sans: ["Manrope", "sans-serif"],
-          },
-          borderRadius: { xl: "1rem", "2xl": "1.5rem" },
         },
-      },
-    };
-  </script>
+      };
+    </script>
 
-  <style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-</head>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
 
-<body
-  class="bg-canvas dark:bg-canvas-dark font-sans text-text-main dark:text-gray-100 antialiased selection:bg-primary/20 selection:text-primary">
-  <!-- WIDER MAIN CONTAINER -->
-  <div
-    class="relative flex h-auto min-h-screen w-full max-w-md md:max-w-[880px] lg:max-w-[980px] mx-auto flex-col overflow-x-hidden border-x border-stone-200 dark:border-stone-800/50 shadow-[0_0_40px_-10px_rgba(0,0,0,0.05)] md:border-x-0 md:bg-canvas dark:md:bg-canvas-dark md:rounded-2xl md:my-10 md:border md:border-stone-200 dark:md:border-stone-800/50 md:shadow-[0_0_40px_-10px_rgba(0,0,0,0.05)]">
-    <!-- Header / Wordmark -->
-    <div class="px-6 pt-6 md:pt-10">
-      <div class="text-sm font-medium tracking-wide text-text-body text-left">
-        Anchor
-      </div>
-      <div class="text-xs font-medium tracking-widest text-text-muted mt-3 mb-3">
-        PRIVATE RESET · 3 MINUTES · NO JOURNALING
-      </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="px-6 pt-6 pb-6 flex flex-col gap-5 md:pt-6 md:pb-6 md:gap-6">
-      <h1 class="text-4xl md:text-5xl font-extrabold leading-[1.1] tracking-tight text-text-main">
-        Stay grounded when family time pulls you away from yourself.
-      </h1>
-
-      <h2 class="text-lg font-light text-text-body dark:text-gray-400 leading-relaxed max-w-[40rem]">
-        A quiet, private 3 minute reset for people who are usually the strong one.
-      </h2>
-
-      <div>
-        <a href="#cta"
-          class="inline-flex items-center justify-center rounded-xl bg-[#2C2825] hover:bg-[#1a1614] text-white font-medium text-sm px-4 h-10 transition-colors">
-          Send it to me
-        </a>
-      </div>
-    </section>
-
-    <!-- Body Copy (tightened) -->
-    <section class="px-6 py-4 flex flex-col gap-5 md:pt-4 md:pb-6 md:gap-6">
-      <div class="flex flex-col gap-1">
-        <p class="text-sm md:text-base text-text-body leading-relaxed">You don't need to fix anything.</p>
-        <p class="text-sm md:text-base text-text-body leading-relaxed">You don't need to explain yourself.</p>
-        <p class="text-sm md:text-base text-text-body leading-relaxed">You just need a moment to come back.</p>
-      </div>
-      <h3 class="text-base font-bold leading-relaxed text-text-main dark:text-gray-200 mt-2">
-        This is for you if:
-      </h3>
-
-      <ul class="list-disc list-inside space-y-2 text-base font-sans leading-relaxed text-text-body dark:text-gray-300">
-        <li>You feel drained after family interactions</li>
-        <li>You are often the one holding it together</li>
-        <li>You want support without journaling, talking, or processing out loud</li>
-      </ul>
-    </section>
-
-    <!-- TWO-COLUMN ROW: What this is + What this is not -->
-    <section class="px-6 py-8 md:py-10">
-      <p class="text-sm italic text-text-muted opacity-90 mb-6">Just a moment of internal support.</p>
-
-      <!-- Use md:items-stretch + h-full cards to force equal height -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 md:items-stretch">
-        <!-- What this is -->
-        <div class="rounded-2xl bg-[#EEF1F6] dark:bg-white/5 p-8 h-full flex flex-col">
-          <h3
-            class="font-sans text-xs font-bold uppercase tracking-widest text-primary dark:text-teal-200/70 opacity-80 mb-6">
-            What this is
-          </h3>
-
-          <div class="flex flex-col gap-4">
-            <div class="flex gap-4 items-start">
-              <div
-                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-200">A private reset you can do anywhere</p>
-            </div>
-
-            <div class="flex gap-4 items-start">
-              <div
-                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-200">
-                Takes about <strong>3 minutes</strong>
-              </p>
-            </div>
-
-            <div class="flex gap-4 items-start">
-              <div
-                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-200">Nothing to write</p>
-            </div>
-
-            <div class="flex gap-4 items-start">
-              <div
-                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-200">Nothing to fix</p>
-            </div>
-
-            <div class="flex gap-4 items-start">
-              <div
-                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-200">Two quiet questions to help you re orient</p>
-            </div>
-          </div>
-
-          <!-- Spacer ensures internal layout stays clean even if content changes -->
-          <div class="mt-auto"></div>
+  <body
+    class="bg-canvas dark:bg-canvas-dark font-sans text-text-main dark:text-gray-100 antialiased selection:bg-primary/20 selection:text-primary"
+  >
+    <!-- WIDER MAIN CONTAINER -->
+    <div
+      class="relative flex h-auto min-h-screen w-full max-w-md md:max-w-[880px] lg:max-w-[980px] mx-auto flex-col overflow-x-hidden border-x border-stone-200 dark:border-stone-800/50 shadow-[0_0_40px_-10px_rgba(0,0,0,0.05)] md:border-x-0 md:bg-canvas dark:md:bg-canvas-dark md:rounded-2xl md:my-10 md:border md:border-stone-200 dark:md:border-stone-800/50 md:shadow-[0_0_40px_-10px_rgba(0,0,_0,0.05)]"
+    >
+      <!-- Header / Wordmark -->
+      <div class="px-6 pt-6 md:pt-10">
+        <div class="text-sm font-medium tracking-wide text-text-body text-left">
+          Anchor
         </div>
-
-        <!-- What this is not -->
-        <div class="rounded-2xl bg-surface dark:bg-surface-dark p-8 h-full flex flex-col">
-          <h3 class="font-sans text-xs font-bold uppercase tracking-widest text-text-muted opacity-80 mb-6">
-            What this is not
-          </h3>
-
-          <div class="flex flex-col gap-4">
-            <div class="flex gap-4 items-start opacity-75">
-              <div
-                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-300">Not therapy</p>
-            </div>
-
-            <div class="flex gap-4 items-start opacity-75">
-              <div
-                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-300">Not journaling</p>
-            </div>
-
-            <div class="flex gap-4 items-start opacity-75">
-              <div
-                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-300">Not habit building</p>
-            </div>
-
-            <div class="flex gap-4 items-start opacity-75">
-              <div
-                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-300">Not a commitment</p>
-            </div>
-
-            <div class="flex gap-4 items-start opacity-75">
-              <div
-                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5">
-                <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
-              </div>
-              <p class="text-base text-text-main dark:text-gray-300">Not something you need to keep up with</p>
-            </div>
-          </div>
-
-          <div class="mt-auto"></div>
+        <div class="text-xs font-medium tracking-widest text-text-muted mt-3 mb-3">
+          PRIVATE RESET · 3 MINUTES · NO JOURNALING
         </div>
       </div>
-    </section>
 
-    <div class="grow"></div>
+      <!-- Hero Section -->
+      <section class="px-6 pt-6 pb-6 flex flex-col gap-5 md:pt-6 md:pb-6 md:gap-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-[1.1] tracking-tight text-text-main">
+          Come back to yourself in 3 quiet minutes.
+        </h1>
 
-    <!-- Email Capture -->
-    <section id="cta" class="px-6 py-10 md:py-12 bg-canvas mt-8 md:mt-10 border-t border-stone-100 dark:border-white/5">
-      <div class="max-w-[520px] mx-auto text-center space-y-4">
-        <h4 class="text-xl font-semibold text-text-main dark:text-white">Try the quiet 3 minute reset</h4>
-        <p class="text-sm text-text-muted dark:text-gray-400">
-          For when you have been around family and feel disconnected from yourself.
+        <h2 class="text-lg font-light text-text-body dark:text-gray-400 leading-relaxed max-w-[40rem]">
+          A short email that helps you reset after emotionally draining moments. No journaling. No talking. No explaining.
+        </h2>
+
+        <div>
+          <a
+            href="#cta"
+            class="inline-flex items-center justify-center rounded-xl bg-[#2C2825] hover:bg-[#1a1614] text-white font-medium text-sm px-4 h-10 transition-colors"
+          >
+            Send it to me
+          </a>
+        </div>
+      </section>
+
+      <!-- Body Copy (tightened) -->
+      <section class="px-6 py-4 flex flex-col gap-5 md:pt-4 md:pb-6 md:gap-6">
+        <div class="flex flex-col gap-1">
+          <p class="text-sm md:text-base text-text-body leading-relaxed">
+            You’ll read two simple questions.
+          </p>
+          <p class="text-sm md:text-base text-text-body leading-relaxed">
+            You won’t need to reply or write anything.
+          </p>
+          <p class="text-sm md:text-base text-text-body leading-relaxed">
+            By the time you’re done, you’ll feel a little more like yourself.
+          </p>
+        </div>
+
+        <div class="mt-2 flex flex-col gap-2">
+          <p class="text-sm md:text-base text-text-body leading-relaxed">
+            Built by someone who is often the strong one.
+          </p>
+          <p class="text-sm md:text-base text-text-body leading-relaxed">
+            The one who holds space, stays calm, and keeps going.
+          </p>
+          <p class="text-sm md:text-base text-text-body leading-relaxed">
+            The next draining conversation is coming. Have this ready.
+          </p>
+        </div>
+
+        <h3 class="text-base font-bold leading-relaxed text-text-main dark:text-gray-200 mt-2">
+          This is for you if:
+        </h3>
+
+        <ul class="list-disc list-inside space-y-2 text-base font-sans leading-relaxed text-text-body dark:text-gray-300">
+          <li>You feel drained after family interactions</li>
+          <li>You are often the one holding it together</li>
+          <li>You want support without journaling, talking, or processing out loud</li>
+        </ul>
+      </section>
+
+      <!-- TWO-COLUMN ROW: What this is + What this is not -->
+      <section class="px-6 py-8 md:py-10">
+        <p class="text-sm italic text-text-muted opacity-90 mb-6">
+          Just a moment of internal support.
         </p>
 
-        <div class="mt-6 mb-3 text-left">
-          <p class="text-sm font-medium text-text-main">What you'll receive</p>
-          <p class="text-sm text-text-body dark:text-gray-400 leading-relaxed">
-            A short email with two grounding questions you can use immediately. No reply required.
-          </p>
+        <!-- Use md:items-stretch + h-full cards to force equal height -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 md:items-stretch">
+          <!-- What this is -->
+          <div class="rounded-2xl bg-[#EEF1F6] dark:bg-white/5 p-8 h-full flex flex-col">
+            <h3
+              class="font-sans text-xs font-bold uppercase tracking-widest text-primary dark:text-teal-200/70 opacity-80 mb-6"
+            >
+              What this is
+            </h3>
+
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-4 items-start">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-200">A private reset you can do anywhere</p>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-200">
+                  Takes about <strong>3 minutes</strong>
+                </p>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-200">Nothing to write</p>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-200">Nothing to fix</p>
+              </div>
+
+              <div class="flex gap-4 items-start">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/30 text-primary mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-200">Two quiet questions to help you re orient</p>
+              </div>
+            </div>
+
+            <div class="mt-auto"></div>
+          </div>
+
+          <!-- What this is not -->
+          <div class="rounded-2xl bg-surface dark:bg-surface-dark p-8 h-full flex flex-col">
+            <h3 class="font-sans text-xs font-bold uppercase tracking-widest text-text-muted opacity-80 mb-6">
+              What this is not
+            </h3>
+
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-4 items-start opacity-75">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-300">Not therapy</p>
+              </div>
+
+              <div class="flex gap-4 items-start opacity-75">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-300">Not journaling</p>
+              </div>
+
+              <div class="flex gap-4 items-start opacity-75">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-300">Not habit building</p>
+              </div>
+
+              <div class="flex gap-4 items-start opacity-75">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-300">Not a commitment</p>
+              </div>
+
+              <div class="flex gap-4 items-start opacity-75">
+                <div
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-text-muted mt-0.5"
+                >
+                  <span class="material-symbols-outlined" style="font-size: 16px;">close</span>
+                </div>
+                <p class="text-base text-text-main dark:text-gray-300">Not something you need to keep up with</p>
+              </div>
+            </div>
+
+            <div class="mt-auto"></div>
+          </div>
         </div>
-        <iframe name="ml_hidden_iframe" id="ml_hidden_iframe" style="display:none; width:0; height:0; border:0;"
-          title="hidden"></iframe>
+      </section>
 
-        <form id="ml-signup-form" class="flex flex-col gap-4 items-stretch" method="POST"
-          action="https://assets.mailerlite.com/jsonp/2031056/forms/176313741641516643/subscribe" target="ml_hidden_iframe">
-          <label class="text-sm text-text-main dark:text-gray-200 text-left" for="cta-email">
-            Where should I send it?
-          </label>
-        
-          <input id="cta-email" name="fields[email]" required
-            class="w-full h-16 rounded-xl border border-gray-200 dark:border-gray-700 bg-surface dark:bg-surface-dark px-4 text-lg placeholder:text-gray-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all shadow-inner"
-            placeholder="you@example.com" type="email" autocomplete="email" />
-        
-          <input type="hidden" name="ml-submit" value="1" />
-          <input type="hidden" name="anticsrf" value="true" />
-        
-          <button
-            class="h-16 w-full rounded-xl bg-[#2C2825] hover:bg-[#1a1614] dark:bg-white text-white dark:text-black font-medium text-lg transition-colors flex items-center justify-center"
-            type="submit">
-            <span>Send it to me</span>
-          </button>
-        
-          <!-- optional: your own success message container -->
-          <p id="ml-success" style="display:none; margin-top:12px;">
-            Check your inbox for the email (and your spam/promotions folder just in case).
+      <div class="grow"></div>
+
+      <!-- Email Capture -->
+      <section
+        id="cta"
+        class="px-6 py-10 md:py-12 bg-canvas mt-8 md:mt-10 border-t border-stone-100 dark:border-white/5"
+      >
+        <div class="max-w-[520px] mx-auto text-center space-y-4">
+          <h4 class="text-xl font-semibold text-text-main dark:text-white">Try the quiet 3 minute reset</h4>
+          <p class="text-sm text-text-muted dark:text-gray-400">
+            For when you have been around family and feel disconnected from yourself.
           </p>
-        </form>
-        <!-- tiny script to show success after form submission -->
-        <script>
-          (function () {
-            const form = document.getElementById("ml-signup-form");
-            const iframe = document.getElementById("ml_hidden_iframe");
-            const success = document.getElementById("ml-success");
 
-            if (!form || !iframe) return;
+          <div class="mt-6 mb-3 text-left">
+            <p class="text-sm font-medium text-text-main">What you'll receive</p>
+            <p class="text-sm text-text-body dark:text-gray-400 leading-relaxed">
+              A short email with two grounding questions you can use immediately. No reply required.
+            </p>
+          </div>
 
-            form.addEventListener("submit", function () {
-              // show success after the request returns (iframe load)
-              iframe.onload = function () {
-                if (success) success.style.display = "block";
-                // optional: disable form after submit
-                // form.querySelector('button[type="submit"]').disabled = true;
-                // optional: clear the input
-                // form.reset();
-              };
-            });
-          })();
-        </script>
+          <iframe
+            name="ml_hidden_iframe"
+            id="ml_hidden_iframe"
+            style="display:none; width:0; height:0; border:0;"
+            title="hidden"
+          ></iframe>
 
-        <p class="text-xs text-text-muted mt-2">We respect your inbox. No spam. Unsubscribe anytime.</p>
-        <p class="text-[11px] text-text-muted mt-1">This is not therapy or medical care.</p>
-      </div>
-    </section>
+          <form
+            id="ml-signup-form"
+            class="flex flex-col gap-4 items-stretch"
+            method="POST"
+            action="https://assets.mailerlite.com/jsonp/2031056/forms/176313741641516643/subscribe"
+            target="ml_hidden_iframe"
+          >
+            <label class="text-sm text-text-main dark:text-gray-200 text-left" for="cta-email">
+              Where should I send it?
+            </label>
 
-    <p class="px-6 mt-2 pb-4 text-xs text-text-muted text-center">
-      This experience is part of Anchor. Quiet mental support for emotionally demanding moments.
-    </p>
+            <input
+              id="cta-email"
+              name="fields[email]"
+              required
+              class="w-full h-16 rounded-xl border border-gray-200 dark:border-gray-700 bg-surface dark:bg-surface-dark px-4 text-lg placeholder:text-gray-400 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all shadow-inner"
+              placeholder="you@example.com"
+              type="email"
+              autocomplete="email"
+            />
 
-    <!-- Footer -->
-    <footer class="p-6 text-center border-t border-gray-100 dark:border-gray-800">
-      <p class="text-xs text-text-muted font-medium">
-        © 2026 Anchor. Quiet mental support for emotionally demanding moments.
+            <input type="hidden" name="ml-submit" value="1" />
+            <input type="hidden" name="anticsrf" value="true" />
+
+            <button
+              class="h-16 w-full rounded-xl bg-[#2C2825] hover:bg-[#1a1614] dark:bg-white text-white dark:text-black font-medium text-lg transition-colors flex items-center justify-center"
+              type="submit"
+            >
+              <span>Send it to me</span>
+            </button>
+
+            <p id="ml-success" style="display:none; margin-top:12px;">
+              Check your inbox for the email (and your spam/promotions folder just in case).
+            </p>
+          </form>
+
+          <script>
+            (function () {
+              const form = document.getElementById("ml-signup-form");
+              const iframe = document.getElementById("ml_hidden_iframe");
+              const success = document.getElementById("ml-success");
+
+              if (!form || !iframe) return;
+
+              form.addEventListener("submit", function () {
+                iframe.onload = function () {
+                  if (success) success.style.display = "block";
+                };
+              });
+            })();
+          </script>
+
+          <p class="text-xs text-text-muted mt-2">We respect your inbox. No spam. Unsubscribe anytime.</p>
+          <p class="text-[11px] text-text-muted mt-1">This is not therapy or medical care.</p>
+        </div>
+      </section>
+
+      <p class="px-6 mt-2 pb-4 text-xs text-text-muted text-center">
+        This experience is part of Anchor. Quiet mental support for emotionally demanding moments.
       </p>
-    </footer>
-  </div>
-</body>
 
+      <!-- Footer -->
+      <footer class="p-6 text-center border-t border-gray-100 dark:border-gray-800">
+        <p class="text-xs text-text-muted font-medium">
+          © 2026 Anchor. Quiet mental support for emotionally demanding moments.
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
